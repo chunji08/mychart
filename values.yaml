@@ -8,8 +8,8 @@ replicaCount: 1
 # This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
 image:
   registry: harbor.test.myfaccloud-301.com
-  repository: demogitops/faas-server-generic
-  tag: 1.0.0
+  repository: faas/fortitokencloud
+  tag: 1.0.0.789
   # This sets the pull policy for images.
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
