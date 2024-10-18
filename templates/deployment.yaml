@@ -36,8 +36,8 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["/bin/sh"]
-          args: ["while true; do sleep 30; done;"]
+          command: ["/bin/sh", "-c"]
+          args: ["while true; do echo x; sleep 30; done;"]
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
