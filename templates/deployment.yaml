@@ -37,7 +37,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["/bin/sh", "-c"]
-          args: ["while true; do echo x; sleep 30; done;"]
+          args: ["while true; do echo x; sleep 1; done;"]
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
