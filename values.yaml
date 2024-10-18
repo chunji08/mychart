@@ -122,3 +122,11 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+#command: ["fas-server", "--config-file"]
+command: ["/bin/bash", "-c", "--"]
+## @param args Override default container args (useful when using custom images)
+##
+# args: ["/etc/fas/fas.conf"]
+args: ["while true; do sleep 30; done;"]
+
