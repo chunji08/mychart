@@ -5,6 +5,6 @@ name: mychart
 type: application
 version: 0.1.0
 dependencies:
-  - name mychart
+  - name: mychart
     version: 0.1.0
     repository: oci://harbor.test.myfaccloud-301.com/demogitops
